@@ -1,0 +1,424 @@
+/* ============================================================
+   ABUNDANCIA RELATIVA — Sitio de autor
+   Sistema de diseño: "Registro de Ledger"
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color tokens */
+  --paper: #F1E9D2;
+  --paper-deep: #E8DDC0;
+  --ink: #1C1A14;
+  --ledger-green: #1B3A2B;
+  --ledger-green-deep: #122620;
+  --wheat: #C9A227;
+  --wheat-bright: #DFB93A;
+  --rule: rgba(28, 26, 20, 0.18);
+  --rule-on-dark: rgba(241, 233, 210, 0.22);
+
+  /* Type */
+  --display: 'Fraunces', serif;
+  --body: 'Source Sans 3', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  --max-w: 760px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+a { color: var(--ledger-green); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { color: var(--wheat); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--wheat);
+  outline-offset: 3px;
+}
+
+/* ---------- Texture: subtle paper grain via layered gradients ---------- */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, var(--ink) 2px, var(--ink) 3px);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 20px;
+}
+
+.brand {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ledger-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav { display: flex; gap: 28px; }
+.site-nav a {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.site-nav a:hover { border-bottom-color: var(--wheat); color: var(--ink); }
+
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .site-nav { gap: 16px; }
+  .site-nav a { font-size: 11px; }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--wheat);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--wheat);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 1.04;
+  margin: 0;
+  color: var(--ink);
+  max-width: 14ch;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ledger-green);
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  max-width: 46ch;
+  color: rgba(28,26,20,0.78);
+  margin: 0;
+}
+
+.hero-meta {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: rgba(28,26,20,0.55);
+}
+
+/* Horizon graphic: a thin rule with a rising-sun arc, signature element */
+.horizon {
+  position: relative;
+  height: 140px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+.horizon::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 220px;
+  background: radial-gradient(circle at 18% 100%, var(--wheat-bright) 0%, var(--wheat) 32%, transparent 68%);
+  opacity: 0.85;
+}
+.horizon::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  border-top: 1.5px solid var(--ink);
+}
+
+/* ============================================================
+   SECTION SCAFFOLDING
+   ============================================================ */
+section { position: relative; z-index: 1; }
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.section-inner.narrow { max-width: var(--max-w); }
+
+.section-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.section-head h2 {
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.section-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(28,26,20,0.5);
+}
+
+/* ============================================================
+   ABOUT / MANIFESTO INTRO
+   ============================================================ */
+.lede {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  max-width: var(--max-w);
+  color: var(--ink);
+}
+
+.body-copy { max-width: var(--max-w); }
+.body-copy p { margin: 0 0 18px; }
+
+/* ============================================================
+   REGISTRY STAMP — signature component
+   ============================================================ */
+.registry {
+  background: var(--ledger-green);
+  color: var(--paper);
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--rule-on-dark);
+  border: 1px solid var(--rule-on-dark);
+}
+
+.doc-card {
+  background: var(--ledger-green);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 280px;
+}
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wheat-bright);
+  border: 1px solid var(--wheat);
+  border-radius: 999px;
+  padding: 5px 12px;
+  width: fit-content;
+}
+.stamp::before { content: '●'; font-size: 8px; }
+
+.doc-card h3 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.doc-card p {
+  font-size: 0.97rem;
+  color: rgba(241,233,210,0.78);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.doc-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: rgba(241,233,210,0.55);
+  border-top: 1px solid var(--rule-on-dark);
+  padding-top: 14px;
+}
+
+.doc-card a.doc-link {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--wheat-bright);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.doc-card a.doc-link:hover { color: var(--paper); }
+.doc-card a.doc-link::after { content: '→'; transition: transform 0.15s ease; }
+.doc-card a.doc-link:hover::after { transform: translateX(3px); }
+
+/* ============================================================
+   BITÁCORA (posts list)
+   ============================================================ */
+.post-list { max-width: var(--max-w); }
+
+.post-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  padding: 26px 0;
+  border-top: 1px solid var(--rule);
+}
+.post-row:first-child { border-top: none; }
+
+.post-date {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: rgba(28,26,20,0.55);
+  padding-top: 4px;
+}
+
+.post-row h3 {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.post-row a { color: var(--ink); text-decoration: none; }
+.post-row a:hover { color: var(--ledger-green); }
+
+.post-row p { margin: 0; color: rgba(28,26,20,0.7); font-size: 0.97rem; }
+
+.post-empty {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: rgba(28,26,20,0.5);
+  padding: 36px 0;
+  border-top: 1px solid var(--rule);
+}
+
+/* ============================================================
+   AUTORÍA / FOOTER
+   ============================================================ */
+.authorship {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 760px) {
+  .auth-grid { grid-template-columns: 1fr; }
+  .post-row { grid-template-columns: 1fr; gap: 6px; }
+}
+
+.authorship h2 {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  margin: 0 0 18px;
+}
+
+.authorship p { color: rgba(241,233,210,0.75); max-width: 50ch; }
+
+.auth-ledger {
+  font-family: var(--mono);
+  font-size: 13px;
+  border: 1px solid var(--rule-on-dark);
+  padding: 22px;
+}
+.auth-ledger dt { color: var(--wheat-bright); margin-top: 14px; letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px; }
+.auth-ledger dt:first-child { margin-top: 0; }
+.auth-ledger dd { margin: 4px 0 0; color: rgba(241,233,210,0.85); }
+
+footer.site-footer {
+  background: var(--ink);
+  color: rgba(241,233,210,0.5);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--rule-on-dark);
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
