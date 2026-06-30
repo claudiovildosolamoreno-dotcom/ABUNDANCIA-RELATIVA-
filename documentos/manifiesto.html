@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abundancia Relativa. El Final del Trabajo Obligatorio. — Manifiesto</title>
+<meta name="description" content="Manifiesto, teorema y caso piloto sobre por qué el ingreso básico universal es fiscalmente inviable a largo plazo, y qué arquitectura alternativa —canasta digna, robótica fiduciaria y dinero sin captura— puede sostener una economía de abundancia relativa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://claudiovildosolamoreno-dotcom.github.io/ABUNDANCIA-RELATIVA-/documentos/manifiesto.html">
+<meta property="og:title" content="Abundancia Relativa. El Final del Trabajo Obligatorio.">
+<meta property="og:description" content="Manifiesto, teorema y caso piloto sobre por qué el ingreso básico universal es fiscalmente inviable a largo plazo, y qué arquitectura alternativa puede sostener una economía de abundancia relativa.">
+<meta property="og:image" content="https://claudiovildosolamoreno-dotcom.github.io/ABUNDANCIA-RELATIVA-/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .doc-hero { padding: 56px 24px 8px; }
+  .doc-hero .section-inner { max-width: var(--max-w); padding: 0; margin: 0 auto; }
+  .reg-stamp {
+    display:inline-flex; align-items:center; gap:8px;
+    font-family: var(--mono); font-size: 12px; letter-spacing:0.06em; text-transform:uppercase;
+    border:1px solid var(--ink); border-radius:999px; padding:6px 14px; margin-bottom:24px;
+  }
+  .reg-stamp::before { content:"●"; font-size:8px; color: var(--wheat); }
+  .doc-body { max-width: var(--max-w); margin: 0 auto; padding: 8px 24px 80px; }
+  .doc-body .lede {
+    font-family: var(--display); font-weight: 400; font-size: 1.4rem; line-height: 1.45;
+    margin: 8px 0 28px; color: var(--ink);
+  }
+  .doc-body p { margin: 0 0 20px; }
+  .doc-h2 {
+    font-family: var(--display); font-weight: 600; font-size: 1.55rem;
+    margin: 48px 0 22px; color: var(--ledger-green);
+    border-top: 1px solid var(--rule); padding-top: 36px;
+  }
+  .doc-body > .doc-h2:first-of-type { border-top: none; padding-top: 0; margin-top: 12px; }
+  .doc-note {
+    background: var(--paper-deep); border-left: 3px solid var(--wheat);
+    padding: 18px 22px; margin: 8px 0 28px; font-size: 0.93rem; line-height: 1.6;
+    color: rgba(28,26,20,0.85);
+  }
+  .doc-note strong { color: var(--ledger-green); }
+  .table-pending {
+    border: 1.5px dashed var(--rule); padding: 22px 24px; margin: 0 0 24px;
+  }
+  .table-pending-tag {
+    display:inline-block; font-family: var(--mono); font-size: 11px; letter-spacing:0.08em;
+    text-transform: uppercase; color: var(--wheat); border:1px solid var(--wheat);
+    border-radius: 999px; padding: 3px 10px; margin-bottom: 12px;
+  }
+  .table-pending-caption { font-family: var(--display); font-weight: 600; font-size: 1.05rem; margin: 0 0 6px; }
+  .table-pending-source { font-family: var(--mono); font-size: 12px; color: rgba(28,26,20,0.55); margin: 0; }
+  .doc-cta {
+    margin-top: 56px; padding: 32px 28px; background: var(--ledger-green); color: var(--paper);
+    display:flex; flex-wrap: wrap; align-items:center; justify-content: space-between; gap:20px;
+  }
+  .doc-cta p { margin:0; font-family: var(--display); font-size: 1.2rem; max-width: 36ch; }
+  .doc-cta a {
+    font-family: var(--mono); font-size: 13px; letter-spacing:0.04em; color: var(--wheat-bright);
+    text-decoration:none; border:1px solid var(--wheat); border-radius:999px; padding:10px 20px;
+    white-space: nowrap;
+  }
+  .doc-cta a:hover { background: var(--wheat); color: var(--ledger-green-deep); }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="../index.html">C. Vildósola Moreno</a>
+  <nav class="site-nav">
+    <a href="../index.html#documentos">Documentos</a>
+    <a href="../bitacora.html">Bitácora</a>
+    <a href="../index.html#autoria">Autoría</a>
+  </nav>
+</header>
+<section class="doc-hero">
+  <div class="section-inner">
+    <span class="reg-stamp">Registro N.° 001 · v145</span>
+    <h1 style="font-family:var(--display); font-size:clamp(2.2rem,5vw,3.2rem); line-height:1.08; margin:0 0 12px;">Abundancia Relativa. El Final del Trabajo Obligatorio.</h1>
+    <p class="hero-sub" style="margin:0 0 8px;">Hacia una economía del emprendimiento y libre de captura.</p>
+    <p class="hero-meta">Claudio Vildósola Moreno · ORCID 0009-0009-2294-054X · Un Manifiesto</p>
+  </div>
+</section>
+<article class="doc-body">
+  <h2 class="doc-h2">Ideas que han estado en las sombras mucho tiempo</h2>
+      <p class="lede">Durante años, la idea de alterar el sistema del dinero ha rondado en la mente de economistas y políticos preocupados por las múltiples inequidades y distorsiones que tienen los mercados, principalmente por la captura que se hace de éste a través de la administración opaca del dinero como instrumento movilizador de la economía. No cabe duda de que el dinero, en cuanto a las cuatro funciones que lo definen, es la mejor solución que ha conocido la humanidad para resolver la asignación de bienes y servicios cuya naturaleza escasa, hasta ahora, ha sido la característica principal de nuestro modus vivendi.</p>
+      <p>Durante años también el trabajo, pensado como imposición estructural y casi única forma para conseguir el dinero necesario, aunque no siempre suficiente para sobrevivir, ha rondado en círculos intelectuales e incluso ha sido objeto de experimentos a escala social. Paul Lafargue lo planteó con filo en El derecho a la pereza en 1880, denunciando como construcción ideológica el dogma del trabajo que la izquierda y la derecha de su época compartían. Bertrand Russell lo retomó en 1932 en Elogio de la ociosidad, afirmando que cuatro horas diarias de trabajo bastarían para sostener a la humanidad si la riqueza producida se distribuyera con justicia. Más recientemente, autores como Mason, Srnicek y Williams, o Bastani, han retomado el debate al calor de la automatización y la inteligencia artificial.</p>
+      <p>Estas dos ideas, la del dinero como dispositivo de poder y la del trabajo como mecanismo institucional para conseguir dinero, han caminado por separado y, cuando se han encontrado, han chocado contra el mismo muro. Plantearlas sin proponer simultáneamente un sistema sustitutivo creíble ha bloqueado su desarrollo y las ha empujado al margen, donde se las trata como desacierto ideológico, ingenuidad utópica, o simplemente como comunismo.</p>
+      <p>Este manifiesto sostiene que las dos ideas pueden articularse ahora de un modo distinto. Y que el motivo por el que esto es posible se debe a una transformación material que ya está ocurriendo.</p>
+      <aside class="doc-note"><strong>Nota bibliográfica:</strong> Aaron Bastani (Fully Automated Luxury Communism, 2019) comparte el diagnóstico y la visión, pero no resuelve quién controla la infraestructura que produce la abundancia — y sin resolver eso, la abundancia queda capturada antes de distribuirse. Nick Srnicek y Alex Williams (Inventing the Future, 2015) llegan al mismo diagnóstico y proponen el ingreso básico universal como solución central; el capítulo trece demuestra por qué esa solución no cierra. Paul Mason (Postcapitalism, 2015; Substack, 2026) es el antecedente más cercano: en 2026 llega a conclusiones notablemente similares — remuneración en especie, UBI solo como transición, planificación por optimización según necesidad. Lo que Mason construye por razonamiento político e histórico, este Manifiesto lo demuestra formalmente y lo arquitecta institucionalmente.</aside>
+      <h2 class="doc-h2">Lo que cambió, y la contradicción que se abre</h2>
+      <p>Mientras los autores citados desarrollaban sus argumentos, el mundo avanzaba a velocidades inéditas hacia un desarrollo científico y tecnológico sin precedentes. Hoy y desde tal vez más de 30 años una no definida pero subyacente Robótica de las Cosas se ha instalado como paradigma de la producción de bienes y servicios y, a medida que avanza, ayudada por la inteligencia artificial, la intervención humana merma y empieza a ser reemplazada por sistemas productivos supraeficientes. Nada indica que este proceso se detenga; al contrario, parece ser que su crecimiento, más que constante se acelera.</p>
+      <p>No siendo el único camino, se puede observar que, si la Robótica de las Cosas avanza, la escasez se relativiza dejando de ser la constante histórica permanente. Esto, porque la producción aumenta aparejada con unos costos marginales que caen sostenidamente. El empleo a gran escala, asociado a estos sectores, retrocede y, generalizado este movimiento, la intervención humana deja de ser totalmente necesaria para alcanzar la productividad de equilibrio.</p>
+      <p>Al estudiar 27 países que representan el 75% del PIB mundial se observó que mientras el PIB y la automatización de procesos crecieron a tasas grandes, la mano de obra no creció y en algunos casos cayó. El período observado fue de 30 años entre 1995 y 2025.</p>
+      <p>Ver estos datos obliga a pensar en cómo es posible este aumento en su producción e ingresos, mientras que la proporción de trabajo humano versus cantidad de robots o máquinas disminuyó. La explicación es clara y no requiere conclusiones: hay un aumento de la automatización de los procesos productivos aparejado de una mayor productividad que no ha requerido un aumento significativo en la mano de obra, y es lo que se observa para la mayoría de estos 27 países.</p>
+      <p>Es obvio que estos países desarrollaron métodos para producir más automatizando sus procesos sin depender de la escasez de mano de obra. ¿Por qué entonces no optaron por reemplazar más mano de obra por robots? Probablemente, en un escenario de crecimiento sistemático, no tenía sentido para empresas ni gobiernos comprarse un gran problema generando despidos masivos mientras vivían épocas de crecimiento y pleno, o casi pleno empleo, por conseguir una rentabilidad que muy posiblemente no llegaría a causa de la falta de poder de compra de tantos desempleados.</p>
+      <p>El auge visible de la inteligencia artificial rompió la opacidad de este fenómeno. Lo que durante décadas ocurrió sin nombre ni titulares, hoy es imposible de ignorar.</p>
+      <p>Para todos los países y empresas que no tienen escasez de mano de obra y que, al igual que todos, enfrentan la presión de crecer y mejorar sus márgenes, están en un equilibrio de teoría de juegos en el que quien no actúa primero queda expuesto a quien sí lo hace. La posición dominante es automatizar.</p>
+      <p>Nuevamente la pregunta es por qué no hay un proceso masivo de despidos a escala global.</p>
+      <p>Primero, si bien hay un proceso a escala masiva de despidos, también hay un aumento similar de empleos precarios y sustitutivos en otras partes del mundo. El efecto queda matemáticamente pequeño, pero oculta una verdad dolorosa. No es solo desempleo: es también el tipo de empleo precarizado que emerge.</p>
+      <p>Segundo, porque el trade off entre los costos de automatizar y despedir —que en general son altos por regulación laboral— y no despedir, sigue dando un saldo positivo en sus utilidades a favor de no despedir. Mientras este trade-off resulte conveniente no habrá un gran cambio en el mercado laboral, pero cuando los beneficios obtenidos de la tecnologización y sus ahorros de costos y eficiencia productiva superen el escenario de desvinculación, tendremos que observar una ola masiva de despidos a escala global.</p>
+      <p>Tercero, y esto lo revela la evidencia de 27 economías desarrolladas durante el período 1995-2025: en los países donde la fuerza laboral no crecía por restricción demográfica, la automatización no desplazó a trabajadores existentes, sino que cubrió vacantes. No hubo despidos masivos. La automatización entró por una puerta política y empresarialmente abierta: la escasez de trabajadores. El resultado observable fue producción sostenida, empleo estable y PIB creciente durante tres décadas, sin que nadie perdiera su trabajo a causa de la automatización. Como evidencia la Tabla 1 y 2, la correlación entre automatización y PIB no es teórica, es verificable en 27 economías clave.</p>
+      <p>En los 27 países la producción creció. Dispersión incluida, la mano de obra bajó, se mantuvo o creció levemente. Pero la producción creció mientras la automatización también lo hizo. No hay una causalidad ni tampoco se estudia siquiera una correlación. Nada más se observa que estos países han construido una base productiva automatizada que funciona y crece sin importar si la fuerza laboral sube se mantiene o decrece. Representan el 75% del PIB mundial y solo en los últimos 7 años su nivel de automatización subió al doble del promedio mundial.</p>
+      <div class="table-pending"><span class="table-pending-tag">Dato pendiente de completar</span><p class="table-pending-caption">Tabla 1. 52% del PIB mundial: 13 economías con alta automatización y PIB creciente</p><p class="table-pending-source">* China: crecimiento histórico seguido de estancamiento y descenso desde ~2022. Fuentes: IFR World Robotics 2025; ONU Population Division; Banco Mundial (precios constantes 2015).</p></div>
+      <div class="table-pending"><span class="table-pending-tag">Dato pendiente de completar</span><p class="table-pending-caption">Tabla 2. 23% del PIB mundial: 14 economías con alta automatización estimada por proxy regional y PIB creciente</p><p class="table-pending-source">Fuentes: IFR World Robotics 2025 (promedios regionales); ONU Population Division; Banco Mundial (precios constantes 2015).</p></div>
+      <div class="table-pending"><span class="table-pending-tag">Dato pendiente de completar</span><p class="table-pending-caption">Tabla 3. 75% del PIB mundial: 27 economías con crecimiento simultáneo y sostenido en automatización y PIB</p><p class="table-pending-source">Fuente: FMI World Economic Outlook, abril 2026. PIB mundial 2024: ~109 billones USD.</p></div>
+      <aside class="doc-note"><strong>Nota metodológica:</strong> Los datos de densidad robótica del Grupo 1 son valores individuales verificados del IFR World Robotics 2025 (comunicado oficial, abril 2026). Los datos del Grupo 2 utilizan los promedios regionales verificados del mismo informe como límite inferior. La muestra no es aleatoria — es una selección de economías desarrolladas con alta automatización — y lo declara explícitamente.</aside>
+      <aside class="doc-note"><strong>Nota metodológica adicional:</strong> el indicador de fuerza laboral usado en este análisis es la población en edad de trabajar (15-64 años), un proxy de la fuerza laboral potencial, no de la tasa de participación efectiva ni del empleo activo. El indicador no captura cambios en informalidad, subempleo o participación laboral. Se usa porque está disponible y es comparable entre los 27 países con la misma metodología. El argumento del capítulo no depende de la precisión de este proxy: depende de que la producción creció mientras este indicador bajaba, se mantenía o crecía levemente, en cualquiera de los tres casos.</aside>
+      <p>Sin embargo, el momento que vivimos hoy ya no cumple estas razones en su totalidad. Lo que estas 27 economías demuestran no es solo que las máquinas pueden producir: demuestran que la producción al menos de una fracción importante de bienes esenciales ya no depende estructuralmente del trabajo humano y, por cierto, no hay nada que impida que esta proporción sea cada vez menor.</p>
+      <p>A un escenario como éste le sobreviene un problema que conviene formular con precisión, porque es el centro de toda la discusión que sigue.</p>
+      <p>Si la producción puede sostenerse con un porcentaje cada vez menor de mano de obra —tal como muestra el capítulo siguiente al desarrollar el mecanismo técnico— la decisión empresarial tenderá a prescindir de la fuerza laboral, y entonces las personas dejarían de disponer del dinero que obtenían de sus salarios. Sin dinero, no pueden acceder a los bienes y servicios que la economía produce. Y si no pueden acceder, junto con el desconcierto político y social, al caer la demanda efectiva ¿qué sentido económico tiene para las empresas mantener los niveles precedentes de producción?</p>
+      <p>La contradicción interna del capitalismo automatizado queda expuesta, el sistema, llevado a las consecuencias del camino planteado, contradice su propia lógica.</p>
+      <p>Es importante notar algo más. Cada vez que en la historia hubo un cambio tecnológico radical, lejos de generar desempleo persistente, terminó creando más demanda laboral, esto es de alguna forma la destrucción creativa de Schumpeter. Este efecto positivo se explica porque los adelantos ocurrían con economías precarias, con baja tecnología y en escenarios de escasez en los que, con cada bien o servicio nuevo, estaba la gente disponible y necesitada para comprar, una masa creciente en parte por estos mismos adelantos que mejoraban la calidad de vida. Más importante que todo, tal vez, fue el impulso empresarial que aprovechó esta circunstancia para satisfacer el aumento de demanda de una población en aumento.</p>
+      <p>Estamos hoy en una convergencia de circunstancias donde ya es posible producir a niveles cercanos o superiores a la demanda total, con costos marginales decrecientes y con metodologías de producción cada vez menos intensivas en mano de obra. Se esperaría entonces un ritmo de desplazamiento que comience a superar con creces los nuevos empleos creados por la propia bonanza tecnológica, pero no se observa el fenómeno en plenitud ni con claridad. Sin embargo, podemos entender tres ideas fuerza:</p>
+      <p>La razón por la que mientras la automatización crecía no se observaba el efecto agregado global en disminución de empleos: una parte significativa de la automatización mundial ocurrió donde no había humanos que desplazar.</p>
+      <p>La alarmante prescindencia de nueva mano de obra para producir cada vez más y a menores costos.</p>
+      <p>La capacidad cada vez más real y concreta de la abundancia relativa.</p>
+      <p>Los grandes actores del juego de la automatización e IA sostienen una narrativa donde el avance de la automatización implicaría olas masivas de desempleo, proponiendo, dentro del conjunto de ideas para resolver, principalmente el concepto de Ingreso Básico Universal, el UBI, un monto de dinero entregado por el estado a las personas y financiado a través de impuestos. La idea es seductora y tiene un efecto embriagador, pero no resuelve el problema de fondo como se mostrará en un capítulo posterior.</p>
+      <p>Si el problema no se resuelve con salario universal, y la contradicción es estructural, entonces la pregunta tiene que reformularse en otro nivel. No es ¿cómo damos dinero a quienes no trabajan? Es ¿qué sistema resolverá los problemas y shock en la economía del trabajo y reemplazará al dinero como filtro universal de acceso, una vez que el trabajo deje de ser el mecanismo dominante para obtener ingresos?</p>
+      <p>Esa pregunta es la que el resto del manifiesto intenta responder. El argumento tecnológico anterior muestra por qué ahora es posible resolver el problema. Lo que viene a continuación muestra por qué el problema existe y persiste más allá de la tecnología.</p>
+      <h2 class="doc-h2">Por qué el problema sigue invisible</h2>
+      <p>La necesidad de trabajar para poder vivir no es un dato de la condición humana. Es una construcción sociológica moderna, y como toda construcción, puede ser deconstruida.</p>
+      <p>La obligatoriedad persiste incluso en la actual abundancia relativa, esto porque el sistema exige a la mayoría vender su tiempo para acceder al dinero. La escasez produce desigualdad hacia abajo. La igualdad forzada por decreto la produjo hacia abajo también, solo que en condiciones peores.</p>
+      <p>Lo que no cambió en ninguno de los casos: la obligatoriedad del trabajo como medio casi único de conseguir dinero para subsistir.</p>
+      <p>Acemoglu y Restrepo demostraron en 2019 que la tecnología puede destruir trabajo o crear nuevas tareas para el humano. Sin embargo, entre 1987 y 2017 sus estudios mostraron que la dirección fue sistemáticamente antischumpeteriana: destruyó trabajo sin crear.</p>
+      <p>Lo que Weber intuyó, Foucault describió y Graeber documentó, Acemoglu y Restrepo lo demostraron. El trabajo obligatorio no es una construcción ideológica — es una consecuencia de diseño.</p>
+      <p>La trampa del deseo, la conspiración y la inercia.</p>
+      <p>El diseño es una pirámide social que genera en quienes están abajo un deseo de ascenso que es genuino, legítimo, pero también completamente funcional al sistema. Esta no es una paradoja accidental. Es el mecanismo central. Para sostener la ilusión de movilidad, la gente sin capital hace lo único que el sistema le ofrece: consume señales de estatus que suelen ser productos y servicios sofisticados que consume la élite, comprados vía crédito. No por falta de sensatez — por racionalidad dentro de un juego donde las señales importan, donde pertenecer a un club, colegio o ambiente de élite sí transfiere capital social y sí abre puertas.</p>
+      <p>El problema no es que la lógica sea falsa. Es que el precio de entrada lo financia la banca, el deseo lo fabrica la publicidad, y el producto lo vende quien se beneficia de que la deuda se contraiga. Cuatro actores sin coordinación explícita producen juntos la estructura de un esquema Ponzi: la banca ofrece crédito porque quiere deudores, los productores venden porque quieren consumidores, los medios amplifican porque viven de los avisadores, y la gente desde abajo financia el flujo completo creyendo que está invirtiendo en su ascenso. Nadie miente. Nadie diseñó esto en una sala.</p>
+      <p>El banquero cree que ofrece un producto útil. El publicista cree que crea aspiración legítima. La persona cree que está haciendo lo correcto por sus hijos.</p>
+      <p>Hay víctimas, pero no hay victimarios.</p>
+      <p>El esquema se arma solo, por puro momentum, exactamente como el sistema capturado que lo contiene. Lo que colapsa no es la ilusión — la ilusión es resiliente. Lo que colapsa es la capacidad de deuda. Cuando la carga financiera aplasta el consumo, la demanda agregada cae, y el sistema que vivía de ese flujo se contrae sobre sí mismo. No hay un Madoff al que arrestar. Hay una estructura que se sostiene mientras haya nuevos entrantes dispuestos a creer, y que se rompe cuando ya no los hay.</p>
+      <p>Esto es posible porque el sistema no necesita ser cierto. Solo requiere mostrar lo prometido y hacer opaco lo vivido.</p>
+      <p>Esto no es una conspiración. Es un momentum. Es la inercia del mercado.</p>
+      <p>Es una masa de acontecimientos a través del tiempo, ocurriendo a una velocidad histórica que la hace imparable.</p>
+      <p>Y la inercia, cuando alcanza cierta escala, opera con gran eficacia sin necesitar que nadie la dirija. Los actores individuales no necesitan coordinarse para producir el resultado agregado: basta con que cada uno persiga sus incentivos locales para que el sistema, en conjunto, reproduzca las condiciones de su propia perpetuación. La hegemonía contemporánea no necesita una sala donde se decida lo que va a pasar. Lo que va a pasar está inscrito en la estructura de los incentivos.</p>
+      <p>Este manifiesto sostiene que ese momentum puede ser interrumpido. Que la inercia puede nombrarse y, una vez nombrada, puede perder gran parte de su fuerza. Y que el momento histórico para hacerlo es exactamente éste, debido a la conjunción técnica y económica que la humanidad nunca tuvo hasta ahora, y que probablemente, si esta ventana de tiempo y oportunidad se desperdicia, no vuelva a tener en buenas condiciones.</p>
+  <div class="doc-cta">
+    <p>Esto es el Capítulo 1 de 22. El manifiesto completo continúa con el mecanismo técnico de la abundancia relativa, la arquitectura institucional y la demostración de por qué el UBI no resuelve el problema de fondo.</p>
+    <a href="#">Descargar el manifiesto completo (PDF)</a>
+  </div>
+</article>
+<footer class="site-footer">
+  © Claudio Vildósola Moreno — todos los derechos reservados sobre el contenido original.
+</footer>
+</body>
+</html>
